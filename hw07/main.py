@@ -2,7 +2,7 @@ import os
 #Задание 1
 def my_cook_book():
     cook_book = {}
-    with open('recipes.txt', encoding='utf-8') as file:
+    with open('hw07/recipes.txt', encoding='utf-8') as file:
         for line in file.read().split('\n\n'):
             key, *value = line.split('\n')
             cook_book[key] = []
@@ -36,24 +36,24 @@ get_shop_list_by_dishes(['Фахитос', 'Омлет'], 2)
 
 #Задание 3
 def final_file():
-    with open('1.txt', encoding='utf-8') as file:
+    with open('hw07/1.txt', encoding='utf-8') as file:
         one = file.read().split('\n')
         numb_str_one = len(one)
-        path_one = os.path.join(os.getcwd(), '1.txt')
+        path_one = os.path.join(os.getcwd(), 'hw07/1.txt')
         file_one = os.path.basename(path_one)
-    with open('2.txt', encoding='utf-8') as file:
+    with open('hw07/2.txt', encoding='utf-8') as file:
         two = file.read().split('\n')
         numb_str_two = len(two)
         path_two = os.path.join(os.getcwd(), '2.txt')
         file_two = os.path.basename(path_two)
-    with open ('3.txt', encoding='utf-8') as file:
+    with open ('hw07/3.txt', encoding='utf-8') as file:
         three = file.read().split('\n')
         numb_str_three = len(three)
-        path_three = os.path.join(os.getcwd(), '3.txt')
+        path_three = os.path.join(os.getcwd(), 'hw07/3.txt')
         file_three = os.path.basename(path_three)
     string = [numb_str_one, numb_str_two, numb_str_three]
     string.sort()
-    finale_f = open('result.txt', '+w', encoding='utf-8')
+    finale_f = open('hw07/result.txt', '+w', encoding='utf-8')
     for i in string:
         if i == numb_str_one:
             finale_f.write(file_one)
